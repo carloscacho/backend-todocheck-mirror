@@ -30,7 +30,7 @@ server.use(cors)
 // ao http.Server.listen () do Node.
 // há dois parametros a porta e uma função de retorno
 // quando o servidor tiver execultado ele ira execultar a função
-server.listen(port, () => {
+server.listen(process.env.PORT || port, () => {
     console.log("Servidor execultabdo com sucesso")
 })
 
