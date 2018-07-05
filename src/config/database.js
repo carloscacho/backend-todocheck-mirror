@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise
 
 //realizar a conexão e exportar essa conexão
-const URLBD = 'mongodb://admin:computa73ns0@ds127851.mlab.com:27851/heroku_w73g6rwf'
+const url = process.env.MONGOLAB_URI ? process.env.MONGOLAB_URI : 'mongodb://localhost/todotest'
+//const URLBD = ''
 //const URLBD = 'mongodb://localhost/todotest'
-module.exports =  mongoose.connect(URLBD) 
+module.exports =  mongoose.connect(url) 
